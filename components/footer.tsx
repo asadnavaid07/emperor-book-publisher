@@ -65,7 +65,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-black-800 text-sm">© 2025 Amazon Author Partners. All rights reserved.</p>
+          <p className="text-black-800 text-sm">© 2025 Emperor Book Publisher. All rights reserved.</p>
           <div className="flex gap-6">
             {["Privacy", "Terms", "Cookie Policy"].map((link) => (
               <a key={link} href="/privacy" className="text-black-800 hover:text-primary transition text-sm">

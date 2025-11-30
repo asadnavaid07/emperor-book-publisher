@@ -13,7 +13,7 @@ const _merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
-  title: "Amazon Author Partners | Book Publishing & Marketing Services",
+  title: "Emperor Book Publisher | Book Publishing & Marketing Services",
   description:
     "From ghostwriting to global distribution—we help authors craft, polish, and publish their books with confidence and reach readers worldwide.",
   keywords: "book publishing, ghostwriting, book editing, self-publishing, book marketing, author services",

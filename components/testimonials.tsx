@@ -7,7 +7,7 @@ const testimonials = [
     name: "Jane D.",
     title: "Thriller Author",
     quote:
-      "Amazon Author Partners transformed my rough draft into a book I'm proud of. Their team guided me through every step, and now my book is selling consistently.",
+      "Emperor Book Publisher transformed my rough draft into a book I'm proud of. Their team guided me through every step, and now my book is selling consistently.",
     rating: 5,
     initials: "JD",
   },

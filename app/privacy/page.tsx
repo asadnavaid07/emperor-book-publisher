@@ -4,7 +4,7 @@ import Footer from "@/components/footer"
 import PrivacyClientPage from "./PrivacyClientPage"
 
 export const metadata = {
-  title: "Privacy Policy | Amazon Author Partners",
+  title: "Privacy Policy | Emperor Book Publisher",
   description: "Our privacy policy and data protection practices for authors and clients.",
 }
 

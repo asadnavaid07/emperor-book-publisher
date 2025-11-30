@@ -18,7 +18,7 @@ export default function PrivacyClientPage() {
           <div>
             <h2 className="text-3xl font-serif font-bold text-primary mb-4">Introduction</h2>
             <p className="text-black-800 leading-relaxed">
-              Amazon Author Partners ("we," "us," "our," or "Company") is committed to protecting your privacy. This
+              Emperor Book Publisher ("we," "us," "our," or "Company") is committed to protecting your privacy. This
               Privacy Policy explains how we collect, use, disclose, and otherwise process your information in
               connection with our website and publishing services.
             </p>
@@ -185,7 +185,7 @@ export default function PrivacyClientPage() {
               If you have questions about this Privacy Policy or our privacy practices, please contact us:
             </p>
             <div className="bg-dark-secondary rounded-lg p-6 border border-primary/20">
-              <p className="text-light font-semibold mb-2">Amazon Author Partners</p>
+              <p className="text-light font-semibold mb-2">Emperor Book Publisher</p>
               <p className="text-black-800">Email: info@amazonauthorpartners.com</p>
               <p className="text-black-800">Phone: +1 (713) 322-4829</p>
               <p className="text-black-800">Location: St. Petersburg, Florida</p>
