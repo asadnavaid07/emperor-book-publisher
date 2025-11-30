@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="w-10 h-10 bg-gradient-to-br from-[#eaa012] to-[#d4860a] rounded-lg flex items-center justify-center">
             <span className="text-black font-sans font-black text-xl">A</span>
           </div>
-          <span className="text-light font-sans font-black text-2xl tracking-tight">Amazon Author Partners</span>
+          <span className="text-light font-sans font-black text-2xl tracking-tight">Emperor Book Publisher</span>
         </div>
         <button className="px-6 py-3 bg-gradient-to-r from-[#eaa012] to-[#d4860a] text-black font-black rounded-full hover:shadow-lg hover:shadow-[#eaa012]/50 transition tracking-wide">
           Start Today
