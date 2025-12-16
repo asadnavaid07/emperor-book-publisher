@@ -36,15 +36,15 @@ export default function CTA() {
             <p className="text-neutral-400 mb-6">Or reach out directly:</p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center text-light">
               <a
-                href="mailto:info@amazonauthorpartners.com"
+                href="mailto:info@emperorbookpublisher.com"
                 className="flex flex-col items-center gap-2 hover:text-primary transition"
               >
                 <span className="text-sm text-neutral-400">Email</span>
-                <span className="font-semibold">info@amazonauthorpartners.com</span>
+                <span className="font-semibold">info@emperorbookpublisher.com</span>
               </a>
-              <a href="tel:+17133224829" className="flex flex-col items-center gap-2 hover:text-primary transition">
+              <a href="tel:+13057657102" className="flex flex-col items-center gap-2 hover:text-primary transition">
                 <span className="text-sm text-neutral-400">Phone</span>
-                <span className="font-semibold">+1 (713) 322-4829</span>
+                <span className="font-semibold">+1 305-765-7102</span>
               </a>
             </div>
           </div>
