@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     "From ghostwriting to global distribution—we help authors craft, polish, and publish their books with confidence and reach readers worldwide.",
   keywords: "book publishing, ghostwriting, book editing, self-publishing, book marketing, author services",
   generator: "v0.app",
+  verification: {
+    google: "VCsOfrtjzW0AJrRFPOx5Sg3nSNRS1GVP1FYT9YhQ_O0",
+  },
   icons: {
     icon: [
       {
