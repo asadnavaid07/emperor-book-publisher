@@ -44,15 +44,15 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-light-secondary">
+    <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</span>
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-dark mt-4 mb-6 text-balance">
+          <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 mb-6 text-balance">
             Complete Publishing Solutions
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto text-balance">
+          <p className="text-lg text-zinc-600 max-w-2xl mx-auto text-balance">
             From initial concept to global distribution, we provide a suite of tailored services to take your book from
             idea to bestseller.
           </p>
@@ -65,18 +65,18 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="group bg-light rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-light-secondary hover:border-primary/20"
+                className="group bg-zinc-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-zinc-100 hover:border-primary/20"
               >
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm`}
                 >
-                  <IconComponent className="w-8 h-8 text-light" />
+                  <IconComponent className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-dark mb-3">{service.title}</h3>
-                <p className="text-neutral-600 leading-relaxed mb-4">{service.description}</p>
+                <h3 className="text-2xl font-sans font-black text-black mb-3">{service.title}</h3>
+                <p className="text-zinc-600 leading-relaxed mb-4">{service.description}</p>
                 <a
                   href="#"
-                  className="text-primary font-semibold hover:text-primary-dark flex items-center gap-2 group/link"
+                  className="text-primary font-semibold hover:text-primary-teal-dark flex items-center gap-2 group/link"
                 >
                   Learn More
                   <span className="group-hover/link:translate-x-1 transition">→</span>

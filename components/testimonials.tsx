@@ -31,12 +31,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-light-secondary">
+    <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-zinc-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Success Stories</span>
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-dark mt-4 text-balance">
+          <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 text-balance">
             Real Authors, Real Results
           </h2>
         </div>
@@ -46,7 +46,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-light rounded-2xl p-8 border border-light-secondary hover:shadow-xl hover:border-primary/20 transition-all"
+              className="bg-white rounded-2xl p-8 border border-zinc-100 hover:shadow-xl hover:border-primary/20 transition-all shadow-sm"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -56,16 +56,16 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-neutral-700 font-serif text-lg leading-relaxed mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-zinc-700 font-serif text-lg leading-relaxed mb-6 italic">"{testimonial.quote}"</p>
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-light font-semibold">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-teal-dark flex items-center justify-center text-white font-semibold">
                   {testimonial.initials}
                 </div>
                 <div>
-                  <p className="font-bold text-dark">{testimonial.name}</p>
-                  <p className="text-sm text-neutral-600">{testimonial.title}</p>
+                  <p className="font-bold text-black">{testimonial.name}</p>
+                  <p className="text-sm text-zinc-500">{testimonial.title}</p>
                 </div>
               </div>
             </div>
@@ -73,19 +73,19 @@ export default function Testimonials() {
         </div>
 
         {/* Trust Stats */}
-        <div className="bg-gradient-to-r from-dark to-dark-secondary rounded-2xl p-12 text-center">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] rounded-2xl p-12 text-center shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">150+</p>
-              <p className="text-light">Books Published</p>
+              <p className="text-5xl font-display font-black text-white mb-2">150+</p>
+              <p className="text-zinc-300 font-medium">Books Published</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">4.9★</p>
-              <p className="text-light">Average Rating</p>
+              <p className="text-5xl font-display font-black text-white mb-2">4.9★</p>
+              <p className="text-zinc-300 font-medium">Average Rating</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">100%</p>
-              <p className="text-light">Author Satisfaction</p>
+              <p className="text-5xl font-display font-black text-white mb-2">100%</p>
+              <p className="text-zinc-300 font-medium">Author Satisfaction</p>
             </div>
           </div>
         </div>

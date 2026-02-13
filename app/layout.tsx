@@ -1,15 +1,17 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Merriweather } from "next/font/google"
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-const _merriweather = Merriweather({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-serif",
+  variable: "--font-sans",
+})
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-display",
 })
 
 export const metadata: Metadata = {
@@ -44,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${_merriweather.variable}`}>
+      <body className={`antialiased ${plusJakartaSans.variable} ${outfit.variable} font-sans`}>
         {children}
         <Analytics />
       </body>
