@@ -1,10 +1,11 @@
 "use client"
 
 import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function CTA() {
   return (
-    <section className="relative w-full py-20 lg:py-32 px-6 lg:px-16 bg-zinc-50 overflow-hidden">
+    <section id="contact" className="relative w-full py-20 lg:py-32 px-6 lg:px-16 bg-zinc-50 overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10 opacity-20">
@@ -22,13 +23,13 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary to-primary-teal-dark text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition flex items-center justify-center gap-2 group">
+            <Link href="mailto:info@emperorbookpublisher.com" className="px-8 py-4 bg-gradient-to-r from-primary to-primary-teal-dark text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition flex items-center justify-center gap-2 group">
               Schedule Free Call
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition" />
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary/10 transition">
+            </Link>
+            <Link href="#process" className="px-8 py-4 bg-transparent border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary/10 transition flex items-center justify-center">
               Learn About Services
-            </button>
+            </Link>
           </div>
 
           {/* Contact Options */}

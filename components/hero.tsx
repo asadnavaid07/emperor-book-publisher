@@ -1,6 +1,7 @@
 "use client"
 
 import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -14,14 +15,14 @@ export default function Hero() {
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-between px-6 lg:px-16 py-3 border-b border-zinc-100">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Emperor Book Publisher Logo" className="h-20 w-auto object-contain" />
+          <img src="/logo.png" alt="Emperor Book Publisher Logo" className="h-16 lg:h-20 w-auto object-contain" />
         </div>
         <span className="text-black font-sans font-black text-2xl tracking-tight hidden sm:block">
           Emperor Book Publisher
         </span>
-        <button className="px-6 py-2.5 bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] text-white font-bold rounded-full hover:shadow-lg hover:shadow-[#0F5052]/20 transition tracking-wide text-sm">
+        <Link href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] text-white font-bold rounded-full hover:shadow-lg hover:shadow-[#0F5052]/20 transition tracking-wide text-sm">
           Start Today
-        </button>
+        </Link>
       </nav>
 
       {/* Hero Content */}
@@ -47,17 +48,17 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] text-white font-black rounded-full hover:shadow-lg hover:shadow-[#0F5052]/30 transition flex items-center justify-center gap-2 group text-lg tracking-wide">
+            <Link href="#contact" className="px-8 py-4 bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] text-white font-black rounded-full hover:shadow-lg hover:shadow-[#0F5052]/30 transition flex items-center justify-center gap-2 group text-lg tracking-wide">
               Get Started
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition" />
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-[#0F5052] text-[#0F5052] font-black rounded-full hover:bg-[#0F5052] hover:text-white transition text-lg tracking-wide">
+            </Link>
+            <Link href="#contact" className="px-8 py-4 bg-transparent border-2 border-[#0F5052] text-[#0F5052] font-black rounded-full hover:bg-[#0F5052] hover:text-white transition text-lg tracking-wide">
               Free Consultation
-            </button>
+            </Link>
           </div>
 
           {/* Stats */}
-          <div className="flex gap-8 mt-12 pt-8 border-t border-zinc-100">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 lg:gap-8 mt-12 pt-8 border-t border-zinc-100">
             <div>
               <p className="text-3xl font-black text-[#0F5052]">150+</p>
               <p className="text-zinc-500 text-sm font-medium">Books Published</p>

@@ -1,6 +1,7 @@
 "use client"
 
 import { CheckCircle2 } from "lucide-react"
+import Link from "next/link"
 
 const steps = [
   {
@@ -42,7 +43,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-white">
+    <section id="process" className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -78,9 +79,9 @@ export default function Process() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-lg text-zinc-600 mb-6">Ready to start your publishing journey?</p>
-          <button className="px-8 py-4 bg-gradient-to-r from-primary to-primary-teal-dark text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition shadow-sm">
+          <Link href="#contact" className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-primary-teal-dark text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition shadow-sm">
             Schedule Your Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </section>

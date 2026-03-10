@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-zinc-100 border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -54,7 +54,7 @@ export default function Footer() {
                 placeholder="Your email"
                 className="px-4 py-2 bg-white border border-zinc-200 rounded-l-lg text-black placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary flex-1 text-sm transition-all"
               />
-              <button className="px-4 py-2 bg-primary text-white font-semibold rounded-r-lg hover:bg-primary-teal-dark transition">
+              <button onClick={() => alert('Thank you for subscribing!')} className="px-4 py-2 bg-primary text-white font-semibold rounded-r-lg hover:bg-primary-teal-dark transition">
                 Join
               </button>
             </div>
