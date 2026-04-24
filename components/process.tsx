@@ -2,6 +2,8 @@
 
 import { CheckCircle2 } from "lucide-react"
 import Link from "next/link"
+import PopupForm from "@/components/popup-form"
+import { FadeIn } from "@/components/fade-in"
 
 const steps = [
   {
@@ -46,23 +48,25 @@ export default function Process() {
     <section id="process" className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Process</span>
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 text-balance">
-            Simple, Transparent, Effective
-          </h2>
-        </div>
+        <FadeIn direction="up">
+          <div className="text-center mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Process</span>
+            <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 text-balance">
+              Simple, Transparent, Effective
+            </h2>
+          </div>
+        </FadeIn>
 
         {/* Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <FadeIn key={index} direction="up" delay={index * 0.1} className="relative">
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-20 -right-4 w-12 h-1 bg-gradient-to-r from-primary to-transparent opacity-20"></div>
+                <div className="hidden lg:block absolute top-20 -right-4 w-12 h-1 bg-gradient-to-r from-primary to-transparent opacity-20 z-0"></div>
               )}
 
-              <div className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:border-primary/30 transition shadow-sm hover:shadow-md">
+              <div className="relative z-10 bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:border-primary/30 transition shadow-sm hover:shadow-md h-full">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-teal-dark rounded-full flex items-center justify-center">
                     <span className="text-white font-sans font-black text-xl">{step.number}</span>
@@ -72,17 +76,21 @@ export default function Process() {
                 <h3 className="text-xl font-display font-black text-black mb-2">{step.title}</h3>
                 <p className="text-zinc-600 leading-relaxed">{step.description}</p>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-zinc-600 mb-6">Ready to start your publishing journey?</p>
-          <Link href="#contact" className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-primary-teal-dark text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition shadow-sm">
-            Schedule Your Free Consultation
-          </Link>
-        </div>
+        <FadeIn direction="up" delay={0.3}>
+          <div className="text-center mt-16">
+            <p className="text-lg text-zinc-600 mb-6">Ready to start your publishing journey?</p>
+            <PopupForm>
+              <button className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-primary-teal-dark text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm">
+                Schedule Your Free Consultation
+              </button>
+            </PopupForm>
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

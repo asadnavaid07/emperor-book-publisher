@@ -1,6 +1,7 @@
 "use client"
 
 import { Star } from "lucide-react"
+import { FadeIn } from "@/components/fade-in"
 
 const testimonials = [
   {
@@ -34,61 +35,66 @@ export default function Testimonials() {
     <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-zinc-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Success Stories</span>
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 text-balance">
-            Real Authors, Real Results
-          </h2>
-        </div>
+        <FadeIn direction="up">
+          <div className="text-center mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Success Stories</span>
+            <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 text-balance">
+              Real Authors, Real Results
+            </h2>
+          </div>
+        </FadeIn>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 border border-zinc-100 hover:shadow-xl hover:border-primary/20 transition-all shadow-sm"
-            >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <p className="text-zinc-700 font-serif text-lg leading-relaxed mb-6 italic">"{testimonial.quote}"</p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-teal-dark flex items-center justify-center text-white font-semibold">
-                  {testimonial.initials}
+            <FadeIn key={index} direction="up" delay={index * 0.1}>
+              <div
+                className="bg-white rounded-2xl p-8 border border-zinc-100 hover:shadow-xl hover:border-primary/20 transition-all shadow-sm h-full flex flex-col"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
                 </div>
-                <div>
-                  <p className="font-bold text-black">{testimonial.name}</p>
-                  <p className="text-sm text-zinc-500">{testimonial.title}</p>
+
+                {/* Quote */}
+                <p className="text-zinc-700 font-serif text-lg leading-relaxed mb-6 italic flex-grow">"{testimonial.quote}"</p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-teal-dark flex items-center justify-center text-white font-semibold">
+                    {testimonial.initials}
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">{testimonial.name}</p>
+                    <p className="text-sm text-zinc-500">{testimonial.title}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* Trust Stats */}
-        <div className="bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] rounded-2xl p-12 text-center shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <p className="text-5xl font-display font-black text-white mb-2">150+</p>
-              <p className="text-zinc-300 font-medium">Books Published</p>
-            </div>
-            <div>
-              <p className="text-5xl font-display font-black text-white mb-2">4.9★</p>
-              <p className="text-zinc-300 font-medium">Average Rating</p>
-            </div>
-            <div>
-              <p className="text-5xl font-display font-black text-white mb-2">100%</p>
-              <p className="text-zinc-300 font-medium">Author Satisfaction</p>
+        <FadeIn direction="up" delay={0.3}>
+          <div className="bg-gradient-to-r from-[#0F5052] to-[#0a3a3c] rounded-2xl p-12 text-center shadow-xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <p className="text-5xl font-display font-black text-white mb-2">150+</p>
+                <p className="text-zinc-300 font-medium">Books Published</p>
+              </div>
+              <div>
+                <p className="text-5xl font-display font-black text-white mb-2">4.9★</p>
+                <p className="text-zinc-300 font-medium">Average Rating</p>
+              </div>
+              <div>
+                <p className="text-5xl font-display font-black text-white mb-2">100%</p>
+                <p className="text-zinc-300 font-medium">Author Satisfaction</p>
+              </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   )

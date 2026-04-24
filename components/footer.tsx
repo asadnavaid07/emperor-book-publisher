@@ -1,6 +1,7 @@
 "use client"
 
 import { BookOpen } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="Emperor Book Publisher Logo" className="w-20 h-20 object-contain" />
+              <Image src="/logo.png" alt="Emperor Book Publisher Logo" width={80} height={80} className="object-contain" />
               {/* <span className="text-black font-sans font-black text-xl tracking-tight">Emperor</span> */}
             </div>
             <p className="text-zinc-600 text-sm">Empowering authors to share their stories with the world.</p>

@@ -1,6 +1,8 @@
 "use client"
 
 import { BookOpen, PenTool, Globe, Sparkles, Megaphone, Headphones } from "lucide-react"
+import PopupForm from "@/components/popup-form"
+import { FadeIn } from "@/components/fade-in"
 
 const services = [
   {
@@ -47,41 +49,45 @@ export default function Services() {
     <section className="w-full py-20 lg:py-32 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</span>
-          <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 mb-6 text-balance">
-            Complete Publishing Solutions
-          </h2>
-          <p className="text-lg text-zinc-600 max-w-2xl mx-auto text-balance">
-            From initial concept to global distribution, we provide a suite of tailored services to take your book from
-            idea to bestseller.
-          </p>
-        </div>
+        <FadeIn direction="up">
+          <div className="text-center mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</span>
+            <h2 className="text-4xl lg:text-5xl font-display font-black text-black mt-4 mb-6 text-balance">
+              Complete Publishing Solutions
+            </h2>
+            <p className="text-lg text-zinc-600 max-w-2xl mx-auto text-balance">
+              From initial concept to global distribution, we provide a suite of tailored services to take your book from
+              idea to bestseller.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
-              <div
-                key={index}
-                className="group bg-zinc-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-zinc-100 hover:border-primary/20"
-              >
+              <FadeIn key={index} direction="up" delay={index * 0.1}>
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm`}
+                  className="group bg-zinc-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-zinc-100 hover:border-primary/20 h-full flex flex-col"
                 >
-                  <IconComponent className="w-8 h-8 text-white" />
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm`}
+                  >
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-sans font-black text-black mb-3">{service.title}</h3>
+                  <p className="text-zinc-600 leading-relaxed mb-6 flex-grow">{service.description}</p>
+                  <PopupForm>
+                    <button
+                      className="text-primary font-semibold hover:text-primary-teal-dark flex items-center gap-2 group/link mt-auto"
+                    >
+                      Learn More
+                      <span className="group-hover/link:translate-x-1 transition">→</span>
+                    </button>
+                  </PopupForm>
                 </div>
-                <h3 className="text-2xl font-sans font-black text-black mb-3">{service.title}</h3>
-                <p className="text-zinc-600 leading-relaxed mb-4">{service.description}</p>
-                <a
-                  href="#"
-                  className="text-primary font-semibold hover:text-primary-teal-dark flex items-center gap-2 group/link"
-                >
-                  Learn More
-                  <span className="group-hover/link:translate-x-1 transition">→</span>
-                </a>
-              </div>
+              </FadeIn>
             )
           })}
         </div>
